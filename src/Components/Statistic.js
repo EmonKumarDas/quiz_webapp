@@ -7,7 +7,7 @@ const Statistic = () => {
 let newdata = statistic.data;
 console.log(newdata);
     return (
-        <div className="lg:mx-[30%] md:mx-[25%] mt-5">
+        <div className="lg:mx-[30%] my-4 md:mx-[25%]">
             <BarChart width={400} height={400} data={newdata}>
             <XAxis dataKey="name" />
             <YAxis />
