@@ -10,7 +10,7 @@ const Cart = ({quiz}) => {
           <h2 className="card-title">{name}!</h2>
           <p>Number of quiz:{total}</p>
           <div className="card-actions justify-end">
-            <button className="btn btn-primary"><Link to={`/details/${id}`}> Start Quiz </Link> </button>
+          <Link to={`/details/${id}`}> <button className="btn btn-primary">Start Quiz </button></Link> 
           </div>
         </div>
       </div>
