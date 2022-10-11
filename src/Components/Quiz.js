@@ -16,7 +16,7 @@ const Quiz = () => {
 
         toast.success(key, {
             position: toast.POSITION.TOP_RIGHT,
-            autoClose: 1000
+            autoClose: 10000
         });
 
     }
