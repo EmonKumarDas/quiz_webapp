@@ -8,9 +8,10 @@ console.log(quiz.data.questions[0].options);
         <div className="m-5 gap-5">
             {
                 quiz.data.questions.map(question=><QuizCard 
-                    key={quiz.data.id}
                     options={question.options}
+                    key = {question.id}
                     name={quiz.data.name}
+                    correctAnswer={question.correctAnswer}
                     question={question.question}></QuizCard>)
             }
         </div>

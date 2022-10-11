@@ -1,9 +1,24 @@
-import React, { useState } from 'react';
-
-const QuizCard = ({ question, name, options }) => {
+import React, { } from 'react';
+import {toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+const QuizCard = ({ question, name, options,correctAnswer}) => {
+    console.log(correctAnswer);
     let handleInput = e => {
         const buttonValue = e.target.value;
-        console.log(buttonValue);
+        if(buttonValue===correctAnswer){
+            console.log("true");
+            toast.success('Your Answer is correct!', {
+                position: toast.POSITION.TOP_RIGHT,
+                autoClose:1000
+            });
+
+        }
+        else{
+            console.log("false");
+            toast.warning('Incorrect answer !', {
+                position: toast.POSITION.TOP_RIGHT
+            });
+        }
 
   }
     return (
@@ -20,6 +35,7 @@ const QuizCard = ({ question, name, options }) => {
 
                 </div>
             </div>
+            <ToastContainer />
         </div>
     );
 };
