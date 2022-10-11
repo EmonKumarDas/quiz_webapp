@@ -1,24 +1,24 @@
 
 import React, { useState } from 'react';
-import {toast, ToastContainer } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-const QuizCard = ({ question, name, options,correctAnswer,score}) => {
+const QuizCard = ({ question, name, options, correctAnswer, score }) => {
 
-    let [disable,setdisable] = useState(false);
+    let [disable, setdisable] = useState(false);
 
     let handleInput = e => {
         const buttonValue = e.target.value;
-        if(buttonValue===correctAnswer){
+        if (buttonValue === correctAnswer) {
             console.log("true");
             toast.success('Your Answer is correct!', {
                 position: toast.POSITION.TOP_RIGHT,
-                autoClose:1000
+                autoClose: 1000
             });
             score(1);
             setdisable(true);
 
         }
-        else{
+        else {
             console.log("false");
             toast.warning('Incorrect answer !', {
                 position: toast.POSITION.TOP_RIGHT
@@ -26,7 +26,7 @@ const QuizCard = ({ question, name, options,correctAnswer,score}) => {
             setdisable(true);
         }
 
-  }
+    }
     return (
         <div className="card w-full bg-base-100 shadow-sm mb-5 ">
             <div className="card-body">
